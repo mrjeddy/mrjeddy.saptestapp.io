@@ -1,0 +1,25 @@
+<mvc:View
+   controllerName="sap.ui.testapp.controller.SumInfo"
+   xmlns="sap.m"
+   xmlns:core="sap.ui.core"
+   xmlns:mvc="sap.ui.core.mvc">
+   <Panel
+      class="sapUiResponsiveMargin"
+      width="auto" >
+      <content>
+        <Text 
+            text="Показатели:"
+            width="90%"/>
+        <Text 
+            width="10%"
+            id="item_lenght"
+            text="0 шт"/>
+        <FormattedText
+            id="sum_price"
+            htmlText="Сумма:"/>
+        <FormattedText
+            id="ave_price"
+            htmlText="Среднее:"/>
+      </content>
+   </Panel>
+</mvc:View>

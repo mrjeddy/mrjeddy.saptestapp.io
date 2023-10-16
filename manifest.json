@@ -1,0 +1,72 @@
+{
+    "_version": "1.12.0",
+    "sap.app": {
+      "id": "sap.ui.testapp",
+      "type": "application",
+      "title": "TestApp",
+      "description": "SapTestApp",
+      "applicationVersion": {
+        "version": "1.0.0"
+      }
+    },
+    "sap.ui": {
+      "technology": "UI5",
+      "deviceTypes": {
+          "desktop": true,
+          "tablet": true,
+          "phone": true
+      }
+    },
+    "sap.ui5": {
+      "rootView": {
+          "viewName": "sap.ui.testapp.view.App",
+          "type": "XML",
+          "async": true,
+          "id": "app"
+      },
+      "dependencies": {
+        "minUI5Version": "1.60",
+        "libs": {
+          "sap.m": {}
+        }
+      },
+      "models": {
+          "good": {
+            "type": "sap.ui.model.json.JSONModel",
+            "uri": "Goods.json"
+        }
+      },
+      "routing": {
+        "config": {
+        "routerClass": "sap.m.routing.Router",
+        "viewType": "XML",
+        "viewPath": "sap.ui.testapp.view",
+        "controlId": "app",
+        "controlAggregation": "pages",
+        "async": true
+        },
+        "routes": [
+        {
+          "pattern": "",
+          "name": "tableview",
+          "target": "tableview"
+        },
+        {
+          "pattern": "item/{goodPath}",
+          "name": "item",
+          "target": "item"
+        }
+        ],
+        "targets": {
+        "tableview": {
+          "viewId": "tableview",
+          "viewName": "TableBlock"
+        },
+        "item": {
+          "viewId": "item",
+          "viewName": "ItemInfo"
+        }
+        }
+      }
+    }
+  }

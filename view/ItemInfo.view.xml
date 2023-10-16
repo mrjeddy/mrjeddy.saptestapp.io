@@ -1,0 +1,33 @@
+<mvc:View
+controllerName="sap.ui.testapp.controller.ItemInfo"
+	xmlns="sap.m"
+	xmlns:mvc="sap.ui.core.mvc">
+	<Page
+		title="Детализация"
+        showNavButton="true"
+		navButtonPress=".onNavBack">
+        <Panel
+        class="sapUiResponsiveMargin"
+        width="auto" >
+        <content>
+            <FormattedText
+                id="item_name"
+                htmlText="Название"/>
+            <FormattedText
+                id="item_prod"
+                htmlText="Производитель"/>
+            <FormattedText
+                id="item_price"
+                htmlText="Цена:"/>
+            <FormattedText
+                id="item_cal"
+                htmlText="Калорийность"/>
+            <FormattedText
+                htmlText="Описание"/>
+            <FormattedText
+                id="item_desc"
+                htmlText="Описание"/>
+        </content>
+        </Panel>
+	</Page>
+</mvc:View>

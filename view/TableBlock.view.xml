@@ -1,0 +1,10 @@
+<mvc:View
+   controllerName="sap.ui.testapp.controller.Table"
+   xmlns="sap.m"
+   xmlns:core="sap.ui.core"
+   xmlns:mvc="sap.ui.core.mvc">
+
+    <mvc:XMLView viewName="sap.ui.testapp.view.SumInfo"/>
+	<mvc:XMLView viewName="sap.ui.testapp.view.ItemList"/>
+    
+</mvc:View>

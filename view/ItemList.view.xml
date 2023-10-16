@@ -1,0 +1,46 @@
+<mvc:View
+   controllerName="sap.ui.testapp.controller.ItemList"
+   xmlns="sap.m"
+   xmlns:mvc="sap.ui.core.mvc">
+   <Panel
+      class="sapUiResponsiveMargin"
+      width="auto" >
+      <content>
+        <Table
+                id="ItemList"
+                class="sapUiResponsiveMargin"
+                width="auto"
+                items="{
+                    path : 'good>/Goods'
+                }">
+            <columns>
+                <Column>
+                    <Text text="Шоколадки"/>
+                </Column>
+                <Column
+                    minScreenWidth="Tablet"
+                    demandPopin="false">
+                    <Text text="Производитель"/>
+                </Column>
+                <Column
+                    hAlign="End">
+                    <Text text="Цена"/>
+                </Column>
+            </columns>
+            <items>
+                <ColumnListItem
+                    type="Navigation"
+                    press=".onPress">
+                    <cells>
+                        <ObjectIdentifier title="{good>Name}"/>
+                        <Text text="{good>Producer}"/>
+                        <ObjectNumber
+                            number="{good>Price}"
+                            unit="руб."/>
+                    </cells>
+                </ColumnListItem>
+            </items>
+	</Table>
+      </content>
+   </Panel>
+</mvc:View>
